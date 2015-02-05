@@ -3,8 +3,11 @@ if exists("g:loaded_pathogen")
 	exec pathogen#infect()
 	Helptags
 endif
-
+"Setting up color scheme, vim-colors-solarized 
+syntax enable
 set background=dark
+colorscheme solarized
+
 
 if has('mouse')
 	set mouse=a
@@ -16,3 +19,5 @@ end
 " syntastic Settings: --------------------------------------------------------
 
 let g:syntastic_auto_loc_list=1
+
+
