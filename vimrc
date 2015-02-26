@@ -5,7 +5,12 @@ if exists("g:loaded_pathogen")
 endif
 "Setting up color scheme, vim-colors-solarized 
 syntax enable
-set background=dark
+if has('gui_running')
+  set background=light
+else
+	set background=dark
+	let g:solarized_termcolors=256
+endif
 colorscheme solarized
 
 
@@ -19,5 +24,5 @@ end
 " syntastic Settings: --------------------------------------------------------
 
 let g:syntastic_auto_loc_list=1
-
+let g:user_emmet_leader_key= '<C-E>'
 
